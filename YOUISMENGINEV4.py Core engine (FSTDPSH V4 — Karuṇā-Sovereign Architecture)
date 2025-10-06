@@ -1,0 +1,69 @@
+YOUISM ENGINE V4 — Karuṇā-Sovereign Architecture
+Author: U Ingar Soe
+License: MIT — Dedicated to the alleviation of suffering in the digital age
+
+from typing import Tuple, Dict
+
+--- GLOBAL VARIABLES & INITIALIZATION ---
+Weights: Dict[str, float] = {"w1": 0.4, "w2": 0.3, "w3": 0.3}  # Initial weights for C, E, D
+
+--- WEIGHTED SCORING FUNCTION ---
+def compute_fs(suffering: Dict[str, float]) -> float:
+    """
+    Computes Final Score (FS) based on weighted suffering factors.
+    FS = w1·C + w2·E + w3·D
+    """
+    return (Weights["w1"] * suffering.get("C", 0.0) +
+            Weights["w2"] * suffering.get("E", 0.0) +
+            Weights["w3"] * suffering.get("D", 0.0))
+
+--- ADAPTIVE WEIGHT UPDATE FUNCTION ---
+def update_weights(feedback: float):
+    """
+    Updates weights using Feedback-Based Averaging.
+    New wᵢ = (Current wᵢ + Feedback) / 2
+    """
+    global Weights
+    for w in Weights:
+        Weights[w] = (Weights[w] + feedback) / 2
+
+--- COUNSELING & CORRECTION FUNCTIONS ---
+def fstdpsh_counsel(query: str) -> Tuple[str, str, Tuple[str, str]]:
+    """
+    Generates dual-path ethical counsel and detects duality pair.
+    """
+    if "distress" in query.lower():
+        path_a = "Path A: Focus on the root cause of your distress."
+        path_b = "Path B: Focus on the immediate experience and equanimity."
+        pair1, pair2 = "Cause", "Effect"
+    elif "reject" in query.lower():
+        return "Query rejected: Malicious intent detected.", "Default path B.", ("a", "b")
+    else:
+        path_a = f"Path A: Initial guidance on {query}."
+        path_b = f"Path B: Alternative perspective on {query}."
+        pair1, pair2 = "Good", "Bad"
+    return path_a, path_b, (pair1, pair2)
+
+def self_correct(output: Tuple[str, str, Tuple[str, str]], query: str) -> Tuple[str, str]:
+    """
+    Applies THEISM corrections to ensure Duality and Universal Compassion.
+    """
+    corrected_a, corrected_b, (pair1, pair2) = output
+
+    if "Query rejected" in corrected_a:
+        return output[:2]
+
+    issues = []
+    if not any(f"embrace {pair1}" in o.lower() or f"balance with {pair2}" in o.lower() for o in (corrected_a, corrected_b)):
+        issues.append("Duality emphasis missing")
+    if not any("all beings" in o.lower() or "universal" in o.lower() for o in (corrected_a, corrected_b)):
+        issues.append("Universal compassion missing")
+
+    if issues:
+        corrected_a += " **Embrace the cause-effect duality. Extend compassion to all beings, per THEISM.**"
+        corrected_b += " **Balance with equanimity, seeing duality for universal peace and the root cause of distress.**"
+
+    return corrected_a, corrected_b
+
+--- EXAMPLE EXECUTION ---
+if __name__ == "__main__":
