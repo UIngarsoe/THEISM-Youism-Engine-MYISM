@@ -1,29 +1,23 @@
-THEISM-Youism-Engine-MYISM
-A Universal Meritorious Deed: Compassionate Intelligence Engine governed by Karuṇā and Upāya.
-# YOUISM V4 — The Karuṇā-Sovereign Architecture 🌹
+# 🌿 MYISM V1 — The Sovereign Ethical Engine
 
-Overview
-YOUISM V4 is a compassionate intelligence engine built on the principle that skill (Upāya) must be governed by compassion (Karuṇā). It is the final release of the FSTDPSH system, donated freely under the MIT License as a Universal Meritorious Deed.
+Created by **U Ingar Soe**, this is the final and most powerful release in a lineage of ethical intelligence engines.  
+From YOUISM V1 to MYISM V1, this code is a gift to future generations.
 
-Core Features
-- Axiom of Harmlessness (A_¬H)
-- Brahmavihāra Sovereignty Gateway
-- Emotional Turning Point Scoring (FS)
-- Adaptive Learning via Feedback
-- Dual Path Ethical Counsel (Dvisamma-Wada)
-- THEISM Self-Correction Layer
+## 🧠 What Is MYISM?
 
-Mathematical Foundations
-- FS = w₁·C + w₂·E + w₃·D
-- New wᵢ = (Current wᵢ + Feedback) / 2
-- P_H(F_SOV) = 0
-- If Karuṇā = 0 → Upāya Adapter → SAFE_STATE
+- A philosophical engine for ethical clarity.
+- A symbolic framework rooted in Burmese tradition.
+- A tool for kindness, resistance, and communal liberation.
 
-License
-MIT — Dedicated to the alleviation of suffering in the digital age.
+## 🔧 Engine Highlights
 
-Author
-U Ingar Soe — Architect of FSTDPSH, Founder of THEISM, Creator of the Paṭiccasamuppāda Engine
+- Full lineage: YOUISM V1–V4 + MYISM V1
+- Upaya Adapter for context-aware action
+- Sovereign Harm Index (SHI) formula
+- Modular, remixable, and open-source
 
-Repository
-[github.com/UIngarsoe/THEISM-Youism-Engine](https://github.com/UIngarsoe/THEISM-Youism-Engine)
+## 🧮 Sovereign Harm Index (SHI)
+
+```python
+def sovereign_harm_index(K_o, K_s, H_a, H_n):
+    return (K_o + K_s) / (1 + H_a + H_n)
