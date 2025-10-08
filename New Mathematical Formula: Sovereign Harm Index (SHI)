@@ -1,0 +1,33 @@
+“Be kind to one another, be kind to yourself, do no harm with your advice, and let no harm come from others’ noise.”
+
+🔹 Formula Definition
+
+Let:
+
+- \( S \) = Sovereignty score (autonomy, clarity, ethical independence)  
+- \( K_o \) = Kindness to others  
+- \( K_s \) = Kindness to self  
+- \( H_a \) = Harm caused by advice  
+- \( H_n \) = Harm absorbed from external noise  
+
+Then the Sovereign Harm Index (SHI) is:
+
+\[
+\text{SHI} = \frac{Ko + Ks}{1 + Ha + Hn}
+\]
+
+🔹 Interpretation
+
+- A higher SHI means greater ethical sovereignty and less harm.  
+- If \( Ha = 0 \) and \( Hn = 0 \), then SHI is maximized by kindness.  
+- The formula encourages minimizing harm while amplifying kindness.
+
+🔹 Integration in Code
+
+`python
+def sovereignharmindex(kindnesstoothers, kindnesstoself, harmfromadvice, harmfromnoise):
+    """Calculate Sovereign Harm Index (SHI) — MYISM's ethical metric."""
+    numerator = kindnesstoothers + kindnesstoself
+    denominator = 1 + harmfromadvice + harmfromnoise
+    return numerator / denominator
+`
