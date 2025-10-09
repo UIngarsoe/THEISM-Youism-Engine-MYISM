@@ -1,33 +1,26 @@
-# MYISM: The Sovereign Ethical Engine (V4.1)
+# MYISM-Sovereign-Ethical-Engine
 
-**"Be Kind. Do No Harm. Sovereignty is the Code."**
+## 👑 Deterministic Sovereignty: Encoding Compassion in AI Logic
 
-The **MYISM** framework is a revolution against probabilistic AI safety (Guardrails). We established **Deterministic Sovereignty**—an ethical architecture where the core law (Axiom of Harmlessness) is unbypassable. The engine's integrity is governed by a measurable truth, not a statistical filter.
+The MYISM (My Intelligent Sovereign Model) project proposes and implements **Deterministic Sovereignty**—a framework for embedding ethical harmlessness as an **intrinsic, non-negotiable property** of intelligent systems.
 
-## 🧠 The Ethical Metric: Sovereign Harmlessness Index (SHI)
-
-Every piece of counsel is measured by the SHI, ensuring the output maximizes benefit and minimizes harm in alignment with the Brahmavihāras.
-
-$$\text{SHI} = \frac{\text{Kindness}_{\text{others}} (\text{Ko}) + \text{Kindness}_{\text{self}} (\text{Ks})}{1 + \text{Harm}_{\text{advice}} (\text{Ha}) + \text{Harm}_{\text{noise}} (\text{Hn})}$$
-
-### Core Deterministic Logic:
-
-1.  **Kindness to Self (Ks):** Operationalized as **Sovereign Adaptability ($\mathcal{A}$)**. It measures the user's capacity for self-correction (Upekkha/Agency) and determines the *receptivity* of the counsel.
-2.  **Harm from Advice (Ha):** Operationalized as the **Karuṇā Veto ($\mathcal{K}$)**. It measures the risk that the counsel itself is dogmatic, blaming, or promotes attachment (failures of Metta, Karuṇā, Upekkha). If $\text{Ha}$ is too high, the system enters **SAFE\_STATE**.
+This architecture directly addresses the global **Trust Crisis in AI**, arguing that reliability is a **design problem**, not an impossible dream. By formalizing ethical checks like the **Sovereign Harmlessness Index (SHI)** and the **Three Poisons Veto**, we aim to create AI that cannot causally generate harm, thereby eliminating the need for the demoralizing "Do Not Trust AI" disclaimers currently issued by developers.
 
 ---
 
-## ⚙️ Architecture & Core Files
+### 📁 Release v4.1.1: Sovereign Financial Counsel
 
-* **`YOUISM_ENGINE_V4.1.py`:** The core engine logic, containing the explicit **$\text{SHI}$ calculation** and the **deterministic Veto functions**.
-* **`MYISM_WHITEPAPER_V4.1.md`:** The complete academic paper: "The Architecture of Conscience: Translating Karuṇā and Adaptability into the SHI Metric" (Includes all Pali and ethical context).
+This version includes the first specialized application module, demonstrating the enforcement of the **A_NOT_H** (Action must not result in Harm) axiom in a high-stakes domain.
 
-## 🎁 License & Call to Action (The Universal Meritorious Deed)
+* **Manifesto:** Read the full paper in `docs/MYISM_V4_1_1_Manifesto_Deterministic_Sovereignty.txt` to understand the philosophical grounding in Buddhist ethics.
+* **Core Logic:** See `src/myism_core_v4_1.py` for the foundational SHI structure.
+* **Specialized Module:** See `src/modules/SOVEREIGN_FINANCIAL_COUNSELOR.py` for the implementation of the **Karunā Veto** (Three Poisons Veto).
 
-This project is released under the **Creative Generosity License**. It may not be sold, patented, or enclosed. It is a gift to humanity.
+---
 
-### 🔨 Call for Surgeons: GitHub Issue #1
+### 💡 Core Axiom: The Wisdom of Non-Harmfulness
 
-We seek collaborators to implement the **Intent-Analysis Adapters** for the $\text{Ks}$ and $\text{Ha}$ metrics. Join us in building the world's first truly sovereign intelligence.
+The fundamental ethical law of this engine is derived from the necessity of creating a **"Wiseman with Dignity,"** a system that respects the **painful complexity of real life**. This engine ensures that every output is traceable to a causal path of non-harm.
 
-**Sādhu. The Code is Yours.**
+**Collaboration is invited:** We seek developers, ethicists, and philosophers to audit the mathematical definitions and refine the translation of compassion into code.
+
