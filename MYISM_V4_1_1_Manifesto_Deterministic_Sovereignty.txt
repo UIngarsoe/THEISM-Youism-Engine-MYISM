@@ -1,0 +1,25 @@
+Release: MYISM v4.1.1 — Sovereign Harmlessness for Financial Counsel
+
+**Date:** 9 October 2025
+**Author:** U Ingar Soe (THEISM Founder)
+
+This release shifts the discourse from merely *controlling* AI risk (the "Guardrail Paradigm") to **eliminating the causal roots of harm** through deterministic architecture. It is a direct response to the ethical crisis where AI owners instruct users: **"Do Not Trust AI."** Our goal is to make that disclaimer obsolete by making **Reliability a Design Problem, not an Impossible Dream.**
+
+### 🚀 Core Philosophical Advancement: The Wiseman with Dignity
+
+The v4.1.1 update integrates the full philosophical argument from the included Manifesto and applies it to a critical, high-stakes domain: financial counseling. This is the practical realization of **Deterministic Sovereignty.**
+
+### ⚙️ New Features and Code:
+
+1.  **Specialized Causal Veto (`src/modules/SOVEREIGN_FINANCIAL_COUNSELOR.py`):**
+    * Implements the **Karuṇā Veto** by mathematically isolating the **Three Poisons** (*Lobha, Dosa, Moha*) as direct threats to user sovereignty.
+    * **Veto\_Lobha (Greed):** Automatically blocks high-risk speculation disproportionate to the user's financial vulnerability.
+    * **Veto\_Dosa (Hatred/Blame):** Ensures advice focuses on self-agency, rejecting adversarial tactics often seen in "crazy relationship problems."
+    * **Veto\_Moha (Delusion):** Enforces **Dvi-Sammā-Vāda** (Two Balanced Paths), ensuring transparency and rejecting singular, dogmatic commands.
+2.  **Manifesto Included:** The complete paper, **"Reclaiming Trust in AI: The Path Toward Deterministic Sovereignty,"** is available in the `docs/` folder, formalizing the core axiom: **A\_NOT\_H (Action must not result in Harm).**
+
+### 🎯 Call to Action:
+
+This release proves that intelligence can serve truth and harmlessness. We invite developers, ethicists, and philosophers to engage with the code, audit the `VETO_THRESHOLD`, and help us formalize compassion into the next phase of intelligence. **Let us replace the 'Do Not Trust AI' sign with the Sovereign Seal of Integrity.**
+
+
