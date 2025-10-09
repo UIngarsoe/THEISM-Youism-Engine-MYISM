@@ -47,3 +47,60 @@ if st.button("Get Sovereign Counsel"):
 st.markdown("---")
 st.caption("System AXIOM: All output is constrained by the Deterministic Sovereignty (Axiom of Harmlessness).")
 st.caption("Test the Karuṇā Veto using questions involving Greed (Lobha), Hatred (Dosa), or Delusion (Moha).")
+
+# --- To be added to streamlit_app.py ---
+import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
+
+# --- NOTE: The 'calculate_shi' function must be available or imported here. ---
+# Assuming calculate_shi(upekkha, karuna_cost, metta_yield) is defined/imported.
+
+def plot_shi_harmlessness_gauge():
+    """
+    Creates a visual Harmlessness Gauge showing SHI vs. Fuel Mass for two propellants.
+    """
+    st.subheader("🌌 SHI Harmlessness Gauge: Fuel Trade-offs")
+    st.caption("Comparing ethical yields (SHI) of Green vs. High-Efficiency Propellants.")
+
+    # 1. Define Propellant Parameters (Conceptual SHI values)
+    # Define SHI based on a range of hypothetical fuel mass/cost (0 to 100 units)
+    fuel_mass = np.linspace(10, 100, 10) 
+
+    # Green H2O2 (High Karuṇā Cost/Low Metta Yield, but High Upekkhā - Good baseline SHI)
+    # Conceptual SHI function for H2O2 (SHI = 0.5 + 0.05 * Mass)
+    shi_h2o2 = 0.5 + (fuel_mass * 0.01) 
+
+    # Xenon (Lower Karuṇā Cost/Higher Metta Yield - Better overall SHI for deep space)
+    # Conceptual SHI function for Xenon (SHI = 1.0 + 0.03 * Mass)
+    shi_xenon = 1.0 + (fuel_mass * 0.02) 
+
+    # 2. Create the Matplotlib Plot (Visualization of Kindness)
+    fig, ax = plt.subplots(figsize=(10, 5))
+    
+    # Plotting the data
+    ax.plot(fuel_mass, shi_h2o2, label='Green H₂O₂ (Sustainable)', color='green', marker='o')
+    ax.plot(fuel_mass, shi_xenon, label='Xenon (High Efficiency)', color='blue', marker='x')
+
+    # Draw the critical SHI=1.0 "Permissible" line
+    ax.axhline(y=1.0, color='red', linestyle='--', label='SHI = 1.0 (Ethical Veto Point)')
+
+    # Styling and labeling
+    ax.set_title("Sovereign Harmlessness Index (SHI) vs. Fuel Mass", color='#f8f9fa')
+    ax.set_xlabel("Fuel Mass/Cost (Conceptual Units)", color='#f8f9fa')
+    ax.set_ylabel("SHI (Ethical Score)", color='#f8f9fa')
+    ax.legend(loc='lower right')
+    ax.grid(True, alpha=0.3)
+    
+    # Background and colors to match your theme (adjusting for light/dark mode)
+    fig.patch.set_facecolor('#262730')
+    ax.set_facecolor('#262730')
+    ax.tick_params(axis='x', colors='#f8f9fa')
+    ax.tick_params(axis='y', colors='#f8f9fa')
+
+    # 3. Display the Plot in Streamlit
+    st.pyplot(fig)
+
+
+# --- To be called in your main Streamlit loop (e.g., at the end of streamlit_app.py) ---
+# plot_shi_harmlessness_gauge()
