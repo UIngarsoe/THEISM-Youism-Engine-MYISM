@@ -1,3 +1,13 @@
+
+---
+title: MYISM-Sovereign-Counselor
+emoji: 🤖
+colorFrom: purple
+colorTo: indigo
+sdk: streamlit
+app_file: app.py  # <--- ADD THIS LINE
+---
+
 # MYISM-Sovereign-Ethical-Engine
 
 ## 👑 Deterministic Sovereignty: Encoding Compassion in AI Logic
