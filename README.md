@@ -1,37 +1,48 @@
+# SHI-Formal-Specification
+## The Sovereign Harmlessness Index (SHI) - A Deterministic Ethical Governance Framework
 
----
-title: MYISM-Sovereign-Counselor
-emoji: 🤖
-colorFrom: purple
-colorTo: indigo
-sdk: streamlit
-app_file: app.py  # <--- ADD THIS LINE
----
+**Origin:** MYISM Compassionate Intelligence Engine
 
-# MYISM-Sovereign-Ethical-Engine
-
-## 👑 Deterministic Sovereignty: Encoding Compassion in AI Logic
-
-The MYISM (My Intelligent Sovereign Model) project proposes and implements **Deterministic Sovereignty**—a framework for embedding ethical harmlessness as an **intrinsic, non-negotiable property** of intelligent systems.
-
-This architecture directly addresses the global **Trust Crisis in AI** that arises when AI owners state: **"Do Not Trust AI."** Our goal is to make that disclaimer obsolete by making **Reliability a Design Problem, not an Impossible Dream.** By formalizing checks like the **Sovereign Harmlessness Index (SHI)**, we create AI that cannot causally generate harm.
+**Status:** Formal Specification v1.0 (Open Source and Free for All)
 
 ---
 
-### 📁 Release v4.1.1: Sovereign Financial Counsel
+### 💡 Purpose
 
-This version includes the first specialized application module, demonstrating the enforcement of the **A_NOT_H** (Action must not result in Harm) axiom in a high-stakes domain.
+The Sovereign Harmlessness Index (SHI) transforms philosophical ethics (Metta, Karuṇā, Upekkhā) into a **mathematically provable governance tool**. It ensures that complex technological and policy decisions—from space mission planning (NASA/SpaceX) to social aid allocation—are based on maximizing benefit while guaranteeing **zero intentional harm (Axiom of Non-Harm)**.
 
-* **Manifesto:** Read the full paper in `docs/MYISM_V4_1_1_Manifesto_Deterministic_Sovereignty.txt` to understand the philosophical grounding in Buddhist ethics.
-* **Core Logic:** See `src/myism_core_v4_1.py` for the foundational SHI structure.
-* **Specialized Module:** See `src/modules/SOVEREIGN_FINANCIAL_COUNSELOR.py` for the implementation of the **Karunā Veto** (Three Poisons Veto).
+### 🔬 The Core Formula
+
+The SHI calculates the ethical alignment of any proposed action, $\mathbf{x} = (M, K, U)$, based on the balance of virtues:
+
+$$
+\boxed{
+\text{SHI}(M,K,U) = \alpha \cdot M + \beta \cdot U - \gamma \cdot K
+}
+$$
+
+| Variable | Description | Meaning |
+| :--- | :--- | :--- |
+| **$M$** | Metta Yield | Positive consequence / Benefit. |
+| **$U$** | Upekkhā | Equanimity / Stability / Fairness. |
+| **$K$** | Karuṇā Cost | Compassion Burden / Sacrifice / Resource Cost. |
+| **$\alpha, \beta, \gamma$** | Normalized Weights | $\alpha + \beta + \gamma = 1$. |
+
+### 🛑 The Deterministic Veto
+
+Any action is **disallowed** if the calculated SHI falls below a policy-mandated threshold ($\text{SHI}_{\min}$). The math enforces the ethical contract:
+
+$$\text{Action Disallowed if: } \text{SHI} < \text{SHI}_{\min}$$
 
 ---
 
-### 💡 Core Axiom: The Wisdom of Non-Harmfulness
+### 📘 Documentation and Proofs
 
-The fundamental ethical law of this engine is derived from the necessity of creating a **"Wiseman with Dignity,"** a system that respects the **painful complexity of real life**. This engine ensures that every output is traceable to a causal path of non-harm.
+For the full mathematical specification, proofs of **Boundedness, Monotonicity, and Veto Consistency**, and details on Optimization and Probabilistic extensions, see the `SPECIFICATION.pdf` file.
 
-**Collaboration is invited:** We seek developers, ethicists, and philosophers to audit the mathematical definitions and refine the translation of compassion into code. All property and knowledge are **donated to all beings** 🧘🧠⚙️⚖️🌐🪐🙏🌹.
+### 🌐 The Digital Covenant
+
+The SHI is donated and free for the world. We invite engineers, ethicists, and policymakers to adopt, critique, and implement this framework to guide the next generation of trustworthy AI and governance systems.
+
 
 
