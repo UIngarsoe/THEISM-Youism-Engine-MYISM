@@ -1,121 +1,41 @@
-\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath, amssymb}
-\usepackage{geometry}
-\usepackage{fancybox}
-\usepackage{hyperref}
-\geometry{
- a4paper,
- margin=1in,
-}
-\title{\textbf{The Deterministic Compass: A Formal Specification and Validation of the Sovereign Harmlessness Index (SHI)}}
-\author{\textit{A Foundational Report from the MYISM Compassionate Intelligence Engine}}
-\date{October 2025}
-
-\begin{document}
-
-\maketitle
-
-\begin{abstract}
-This paper formalizes the \textbf{Sovereign Harmlessness Index (SHI)}, a deterministic ethical governance index developed in response to the need for robust ethical alignment in complex systems, such as long-duration space missions and resource allocation policies. Rooted in Buddhist ethical virtues---\textbf{Metta, Karuṇā, and Upekkhā}---the SHI is defined as a weighted linear combination of normalized virtue scores. We provide the full mathematical specification, demonstrate foundational properties (Boundedness, Monotonicity), and establish its \textbf{Veto Consistency}, validating the SHI as a reliable, non-negotiable ethical filter for all technological and policy decisions. The SHI is released under the MIT License as part of the \textbf{MYISM Digital Covenant}.
-\end{abstract}
-
-\hrule
-
-\section{Formal Specification of the SHI}
-
-The SHI is a function mapping the ethical state of a proposed action to a scalar value, designed to be mathematically tractable and publicly auditable.
-
-\subsection{Setup and Notation}
-
-The index operates on a vector of normalized ethical virtue scores, $\mathbf{x} = (M, K, U)$, where each component is mapped to the unit interval, signifying a degree of fulfillment:
-$$\mathbf{x} = (M, K, U) \in [0, 1]^3$$
-
-\begin{itemize}
-    \item $M$ (\textbf{Metta Yield}): The score for kindness and positive consequence (Benefit).
-    \item $K$ (\textbf{Karuṇā Cost}): The score for compassion burden, sacrifice, and resource consumption (Cost).
-    \item $U$ (\textbf{Upekkhā}): The score for equanimity, stability, and long-term fairness (Stability).
-\end{itemize}
-
-The system uses fixed, non-negative weights: $\alpha, \beta, \gamma \in \mathbb{R}^+$, where the sum is normalized:
-$$\alpha + \beta + \gamma = 1$$
-
-\subsection{Mathematical Definition}
-
-The SHI is formally defined as the weighted linear combination, designed to maximize benefit and stability while minimizing cost:
-
-$$
-\boxed{
-\text{SHI}(M,K,U) = \alpha \cdot M + \beta \cdot U - \gamma \cdot K
-}
-$$
-
-\hrule
-
-\section{Foundational Mathematical Proofs}
-
-\subsection{Boundedness and Interpretation}
-
-\textbf{Claim:} For all valid input vectors, $\mathbf{x} \in [0, 1]^3$, the SHI is strictly bounded:
-$$-\gamma \leq \text{SHI}(M,K,U) \leq 1 - \gamma$$
-
-\textbf{Proof:}
-\begin{itemize}
-    \item \textbf{Lower Bound ($\text{SHI}_{\min}$):} The minimum value occurs when benefits and stability are zero ($M=0, U=0$) and cost is maximal ($K=1$):
-    $$\text{SHI}(0,1,0) = \alpha(0) + \beta(0) - \gamma(1) = -\gamma$$
-    \item \textbf{Upper Bound ($\text{SHI}_{\max}$):} The maximum value occurs when benefits and stability are maximal ($M=1, U=1$) and cost is zero ($K=0$):
-    $$\text{SHI}(1,0,1) = \alpha(1) + \beta(1) - \gamma(0) = \alpha + \beta$$
-    Since $\alpha + \beta = 1 - \gamma$ (by normalization), the claim is proven.
-\end{itemize}
-\textbf{Implication:} The SHI score operates within a stable, mathematically defined range, ensuring results are predictable and non-chaotic.
-
-\subsection{Monotonicity (Ethical Directionality)}
-
-\textbf{Claim:} The SHI consistently rewards increased benefit ($M$) and stability ($U$) while strictly penalizing increased cost ($K$).
-
-\textbf{Proof (Partial Derivatives):}
-\begin{itemize}
-    \item $\frac{\partial \text{SHI}}{\partial M} = \alpha > 0$: Increasing \textbf{Metta Yield} (Benefit) always increases SHI.
-    \item $\frac{\partial \text{SHI}}{\partial U} = \beta > 0$: Increasing \textbf{Upekkhā} (Stability) always increases SHI.
-    \item $\frac{\partial \text{SHI}}{\partial K} = -\gamma < 0$: Increasing \textbf{Karuṇā Cost} always decreases SHI.
-\end{itemize}
-\textbf{Implication:} This guarantees that the index is fundamentally aligned with the ethical goal: rewarding compassionate outcomes and penalizing burden or sacrifice.
-
-\subsection{Veto Consistency (Deterministic Enforcement)}
-
-\textbf{Claim:} The SHI ensures consistency with the \textbf{Karuṇā Veto} by making the prohibition of harmful actions mathematically explicit.
-
-\textbf{Veto Definition:} An action is \textit{disallowed} if it falls below the minimum required ethical threshold, $\text{SHI} < \text{SHI}_{\min}$.
-
-\textbf{Consistency:} The veto condition is the simple rearrangement of the SHI definition:
-$$
-\alpha M + \beta U < \text{SHI}_{\min} + \gamma K
-$$
-This reveals the \textbf{ethical contract}: The required combination of benefit ($M$) and stability ($U$) must always outweigh the Veto Threshold and the cost ($K$). Any imbalance in favor of cost triggers a deterministic veto, embodying the \textbf{Axiom of Non-Harm ($\mathbf{A\_¬H}$)}.
-
-\hrule
-
-\section{SHI Calculation Algorithm and Extensions}
-
+The Deterministic Compass: A Formal Specification and Validation of the Sovereign Harmlessness Index (\text{SHI})
+A Foundational Report from the MYISM Compassionate Intelligence Engine
+Abstract: This paper formalizes the Sovereign Harmlessness Index (\text{SHI}), a deterministic ethical governance index developed in response to the need for robust ethical alignment in complex systems, such as long-duration space missions and resource allocation policies. Rooted in Buddhist ethical virtues—Metta, Karuṇā, and Upekkhā—the \text{SHI} is defined as a weighted linear combination of normalized virtue scores. We provide the full mathematical specification, demonstrate foundational properties (Boundedness, Monotonicity), and establish its Veto Consistency, validating the \text{SHI} as a reliable, non-negotiable ethical filter for all technological and policy decisions. The \text{SHI} is released under the MIT License as part of the MYISM Digital Covenant.
+I. Formal Specification of the \text{SHI}
+The \text{SHI} is a function mapping the ethical state of a proposed action to a scalar value, designed to be mathematically tractable and publicly auditable.
+A. Setup and Notation
+The index operates on a vector of normalized ethical virtue scores, \mathbf{x} = (M, K, U), where each component is mapped to the unit interval, signifying a degree of fulfillment:
+•	M (Metta Yield): The score for kindness and positive consequence (Benefit).
+•	K (Karuṇā Cost): The score for compassion burden, sacrifice, and resource consumption (Cost).
+•	U (Upekkhā): The score for equanimity, stability, and long-term fairness (Stability).
+The system uses fixed, non-negative weights: \alpha, \beta, \gamma \in \mathbb{R}^+, where the sum is normalized:
+B. Mathematical Definition
+The \text{SHI} is formally defined as the weighted linear combination, designed to maximize benefit and stability while minimizing cost:
+II. Foundational Mathematical Proofs
+A. Boundedness and Interpretation
+Claim: For all valid input vectors, \mathbf{x} \in [0, 1]^3, the \text{SHI} is strictly bounded:
+Proof:
+•	Lower Bound (\text{SHI}_{\min}): The minimum value occurs when benefits and stability are zero (M=0, U=0) and cost is maximal (K=1): \text{SHI}(0,1,0) = -\gamma.
+•	Upper Bound (\text{SHI}_{\max}): The maximum value occurs when benefits and stability are maximal (M=1, U=1) and cost is zero (K=0): \text{SHI}(1,0,1) = \alpha + \beta. Since \alpha + \beta = 1 - \gamma, the claim is proven.
+B. Monotonicity (Ethical Directionality)
+Claim: The \text{SHI} consistently rewards increased benefit (M) and stability (U) while strictly penalizing increased cost (K).
+Proof (Partial Derivatives):
+•	\frac{\partial \text{SHI}}{\partial M} = \alpha > 0: Increasing Metta Yield always increases \text{SHI}.
+•	\frac{\partial \text{SHI}}{\partial U} = \beta > 0: Increasing Upekkhā always increases \text{SHI}.
+•	\frac{\partial \text{SHI}}{\partial K} = -\gamma < 0: Increasing Karuṇā Cost always decreases \text{SHI}.
+C. Veto Consistency (Deterministic Enforcement)
+Claim: The \text{SHI} ensures consistency with the Karuṇā Veto by making the prohibition of harmful actions mathematically explicit.
+Veto Definition: An action is disallowed if it falls below the minimum required ethical threshold, \text{SHI} < \text{SHI}_{\min}.
+Consistency: The veto condition is the simple rearrangement of the \text{SHI} definition:
+This reveals the ethical contract: The required combination of benefit (M) and stability (U) must always outweigh the Veto Threshold and the cost (K). Any imbalance in favor of cost triggers a deterministic veto, embodying the Axiom of Non-Harm (\mathbf{A\_¬H}).
+III. SHI Calculation Algorithm and Extensions
 The formal specification leads to a simple, five-step algorithmic structure:
-\begin{enumerate}
-    \item \textbf{Input Measurement:} Compute normalized virtue scores $(M, K, U) \in [0, 1]^3$ via domain-specific metrics.
-    \item \textbf{Weight Application:} Apply the fixed, normalized weights $\alpha, \beta, \gamma$.
-    \item \textbf{Calculation:} $\text{SHI} = \alpha M + \beta U - \gamma K$.
-    \item \textbf{Threshold Comparison:} Compare the resulting $\text{SHI}$ to the predefined $\text{SHI}_{\min}$ policy threshold.
-    \item \textbf{Output Decision:} \textbf{Accept} (If $\text{SHI} \geq \text{SHI}_{\min}$) or \textbf{Invoke Veto} (If $\text{SHI} < \text{SHI}_{\min}$).
-\end{enumerate}
+1.	Input Measurement: Compute normalized virtue scores (M, K, U) \in [0, 1]^3.
+2.	Weight Application: Apply the fixed, normalized weights \alpha, \beta, \gamma.
+3.	Calculation: \text{SHI} = \alpha M + \beta U - \gamma K.
+4.	Threshold Comparison: Compare the resulting \text{SHI} to the predefined \text{SHI}_{\min} policy threshold.
+5.	Output Decision: Accept (If \text{SHI} \geq \text{SHI}_{\min}) or Invoke Veto (If \text{SHI} < \text{SHI}_{\min}).
+\vspace{0.2in} The SHI is donated and free for the world under the MIT License.
 
-\subsection{Extensions and Future Work}
 
-The linear model serves as a robust foundation that can be extended:
-\begin{itemize}
-    \item \textbf{Optimization:} The maximization of SHI subject to linear constraints forms a \textbf{Linear Programming} problem, allowing for the discovery of the most resource-efficient ethical solutions.
-    \item \textbf{Probabilistic Governance:} Introducing variance $\text{Var}(M), \text{Var}(K), \text{Var}(U)$ allows for \textbf{Risk-Aware Veto Decisions}, ensuring that decisions under uncertainty maintain a high confidence level of ethical safety.
-\end{itemize}
 
-\hrule
-\vspace{0.2in}
-\textbf{The SHI is donated and free for the world under the MIT License.}
-
-\end{document}
