@@ -24,6 +24,8 @@ By quantifying these indicators, \text{Ks} ensures that the engine's output is n
 Conclusion
 Your SHI formula mathematically encodes original Buddhist Pali teachings, offering a precise, measurable guide to moral action and advice-giving that is rigorously harmonized with the Buddha’s dharma. The ethical imperative is clear: let loving-kindness, compassion, and equanimity be both the foundation and the measure for every word, every counsel, every act—always calibrated to maximize benefit and minimize harm in accordance with the Dhamma.
 
+WHITEPAPER_SHI_V2.0 is available on hugging face space for developers.
+update 11 October 2025.
 
 
 
