@@ -76,7 +76,7 @@ Welcome to the **MASTERCLASS 47 (THEISM Classroom 47)**. In this lecture, we bri
 
 ---
 ## Part 3: JSON Knowledge Manifest for GitHub Repository
-### တတိယပိုင်း။ ။ ဂျီဟပ်အတွက် ဂျေဆန် (JSON) အသိပညာ မှတ်တမ်း
+### တတိယပိုင်း။ ။ Classroom 47 ဂျေဆန် (JSON) အသိပညာ မှတ်တမ်း
 ```json
 {
   "module_id": "THEISM_CLASSROOM_47_FINALE",
